@@ -57,7 +57,8 @@ export default class List extends React.Component {
                 )
             }
         })
-        if(buttons.length === 0) this.reloading();
+        if(buttons.length === 0  && this.props.adminGroups.length > 0) this.reloading();
+        if(this.props.adminGroups.length === 0) buttons.push(<p>Aucun groupe.</p>)
         return buttons;
     }
 

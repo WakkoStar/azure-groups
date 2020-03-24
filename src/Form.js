@@ -136,7 +136,8 @@ export default class Formpage extends React.Component {
               )
           }
       })
-      if(inputs.length === 0) this.reloading();
+      if(inputs.length === 0 && this.props.adminGroups.length > 0) this.reloading();
+      if(this.props.adminGroups.length === 0) inputs.push(<div><p>Aucun groupe.</p></div>)
       return inputs;
   }
 
