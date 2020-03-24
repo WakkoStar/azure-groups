@@ -1,5 +1,13 @@
 module.exports = {
     invite : [
+      /*
+      L'index du groupe de invite doit avoir le meme index du groupe admin
+      (Exemple : habitat : invite(0) et admin(0), communes : invite(1) et admin(1))
+        {
+          name : le nom du groupe que l'on veut,
+          id: l'id du groupe Azure AD
+        },
+      */
         {
           name : "Habitat.gpseo",
           id : "ee109a66-f87d-4933-8cc1-562047148e39"

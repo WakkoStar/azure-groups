@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Documentation de l'application relative aux plateformes
 
-## Available Scripts
+L'interface est codé en Javascript avec le framework React et le backend utilisé est Microsoft Graph pour les requêtes réseaux.
 
-In the project directory, you can run:
+App.js : Fichier racine
+Navbar.js : Fichier pour la navigation
+Config.js : Configuration de l'application et de l'annuaire Azure AD
+Groups.js : Fichier pour controler les groupes
+GraphService.js : Méthodes pour les requetes réseaux
 
-### `npm start`
+Page importantes :
+Form.js : Page "Inviter"
+List.js : Page "Groupe"
+Welcome.js : Page "Connexion"
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Comment ajouter un groupe
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Dans le fichier `Groups.js` tout les groupes sont listés en 2 parties :
+`admin` contient des personnes pouvant éditer les groupes `invite` qui contient les personnes pouvant accéder aux plateformes.
 
-### `npm test`
+Une plateforme possède donc deux groupes un `admin` et un `invite`. Ces deux groupes doivent possèder le même index pour leur fonctionnement.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```json
+{
+    "invite" : [
+        {
+          "name" : "Habitat.gpseo",
+          "id" : "ee109a66-f87d-4933-8cc1-562047148e39"
+        },
+        {
+          "name" : "Communes.gpseo",
+          "id" : "325b8174-e8ad-45dd-94c1-94ee8da896f1"
+        }
+    ],
+    "admin" : [
+      {
+        "name" : "habitat.admin.ag",
+        "id" : "fad2da0c-cc32-4f77-afe1-d23ea2be329a"
+      },
+      {
+        "name" : "communes.admin.ag",
+        "id" : "110c5ab2-d2c6-48f5-8c41-d1bac5b59562"
+      }
+    ]
+}
+```
