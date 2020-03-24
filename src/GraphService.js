@@ -69,7 +69,7 @@ export async function inviteUserfromMail(accessToken, mail)
   const invitation = await client.api('/invitations')
     .post({
           invitedUserEmailAddress: mail.toLowerCase(),
-          inviteRedirectUrl: "https://localhost:3000/",
+          inviteRedirectUrl: "https://azure-groups.herokuapp.com/",
           sendInvitationMessage: true,
           invitedUserDisplayName: mail.slice(0,mail.indexOf('@')).toLowerCase()
     });
