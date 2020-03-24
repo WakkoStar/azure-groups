@@ -1,28 +1,29 @@
-### Documentation de l'application relative aux plateformes
+#Azure-Groups
 
 L'interface est codé en Javascript avec le framework React et le backend utilisé est Microsoft Graph pour les requêtes réseaux.
 
-App.js : Fichier racine
-Navbar.js : Fichier pour la navigation
-Config.js : Configuration de l'application et de l'annuaire Azure AD
-Groups.js : Fichier pour controler les groupes
-GraphService.js : Méthodes pour les requetes réseaux
+## Documentation de l'application relative aux plateformes
 
-Page importantes :
-Form.js : Page "Inviter"
-List.js : Page "Groupe"
-Welcome.js : Page "Connexion"
+####Fichiers importants
+- App.js : Fichier racine
+- Navbar.js : Fichier pour la navigation
+- Config.js : Configuration de l'application et de l'annuaire Azure AD
+- Groups.js : Fichier pour controler les groupes
+- GraphService.js : Méthodes pour les requetes réseaux
 
+####Page importantes :
+- Form.js : Page "Inviter"
+- List.js : Page "Groupe"
+- Welcome.js : Page "Connexion"
 
-
-### Comment ajouter un groupe
+## Comment ajouter un groupe
 
 Dans le fichier `Groups.js` tout les groupes sont listés en 2 parties :
 `admin` contient des personnes pouvant éditer les groupes `invite` qui contient les personnes pouvant accéder aux plateformes.
 
 Une plateforme possède donc deux groupes un `admin` et un `invite`. Ces deux groupes doivent possèder le même index pour leur fonctionnement.
 
-Fichier `Groups.js`
+####Fichier `Groups.js`
 ```json
 {
     "invite" : [
