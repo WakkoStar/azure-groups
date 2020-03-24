@@ -20,6 +20,7 @@ Dans le fichier `Groups.js` tout les groupes sont listés en 2 parties :
 
 Une plateforme possède donc deux groupes un `admin` et un `invite`. Ces deux groupes doivent possèder le même index pour leur fonctionnement.
 
+Fichier `Groups.js`
 ```json
 {
     "invite" : [
