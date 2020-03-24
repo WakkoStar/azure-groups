@@ -19,7 +19,7 @@ class App extends Component  {
           auth: {
               clientId: config.appId,
               authority: "https://login.microsoftonline.com/fd87095d-65db-4894-98c3-4f76bdd06eb2",
-              redirectURI: "http://localhost:3000"
+              redirectURI: "https://azure-groups.herokuapp.com/"
           },
           cache: {
               cacheLocation: "localStorage",
@@ -182,7 +182,7 @@ class App extends Component  {
                 } />
             ) : (
               ""
-            )  
+            )
           }
 
       </Router>
