@@ -13,6 +13,8 @@ Form.js : Page "Inviter"
 List.js : Page "Groupe"
 Welcome.js : Page "Connexion"
 
+
+
 ### Comment ajouter un groupe
 
 Dans le fichier `Groups.js` tout les groupes sont listés en 2 parties :
