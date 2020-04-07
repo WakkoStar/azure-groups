@@ -1,5 +1,5 @@
 module.exports = {
-  appId: 'a597208d-3e9b-4926-bd6d-0415c98c2bc4',
+  appId: '2a6450dc-ba22-418d-bd3c-5ce3898ebb1b',
   scopes: [
     "User.ReadWrite.All",
     "Directory.ReadWrite.All",

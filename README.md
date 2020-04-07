@@ -48,3 +48,8 @@ Une plateforme possède donc deux groupes un `admin` et un `invite`. Ces deux gr
     ]
 }
 ```
+
+#### Groupes actuels
+
+- Plateforme Habitat : (admin : Admin-Habitat-SSO | invite : DCT-Habitat-SSO)
+- Plateforme Commune : (admin : Admin-Communes-SSO | invite : DCT-Communes-SSO) 

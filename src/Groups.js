@@ -10,21 +10,21 @@ module.exports = {
       */
         {
           name : "Habitat.gpseo",
-          id : "ee109a66-f87d-4933-8cc1-562047148e39"
+          id : "3cd6db62-d053-46c8-b824-b65506e14813"
         },
         {
           name : "Communes.gpseo",
-          id : "325b8174-e8ad-45dd-94c1-94ee8da896f1"
+          id : "3db2b423-69a7-4744-b048-db02a7708b8a"
         }
     ],
     admin : [
       {
         name : "habitat.admin.ag",
-        id : "fad2da0c-cc32-4f77-afe1-d23ea2be329a"
+        id : "d52f7d12-8ec3-4bca-9c89-6ad009c1828d"
       },
       {
         name : "communes.admin.ag",
-        id : "110c5ab2-d2c6-48f5-8c41-d1bac5b59562"
+        id : "676c053a-3dcc-4931-9dff-e846b805f866"
       }
     ]
 };

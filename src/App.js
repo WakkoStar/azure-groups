@@ -18,7 +18,7 @@ class App extends Component  {
     this.userAgentApplication = new UserAgentApplication({
           auth: {
               clientId: config.appId,
-              authority: "https://login.microsoftonline.com/fd87095d-65db-4894-98c3-4f76bdd06eb2",
+              authority: "https://login.microsoftonline.com/98604871-595c-4bfa-86fd-a0b40f83c27f",
               redirectURI: "https://azure-groups.herokuapp.com/"
           },
           cache: {
@@ -89,7 +89,7 @@ class App extends Component  {
         //Creer un access token
         var accessToken = await this.userAgentApplication.acquireTokenSilent({
           scopes: config.scopes,
-          authority : "https://login.microsoftonline.com/fd87095d-65db-4894-98c3-4f76bdd06eb2"
+          authority : "https://login.microsoftonline.com/98604871-595c-4bfa-86fd-a0b40f83c27f"
         });
 
         //S'il existe
