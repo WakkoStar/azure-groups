@@ -109,10 +109,6 @@ export default class Formpage extends React.Component {
     var selected_groups = this.props.selected_groups;
     selected_groups[index] = selected_groups[index] === true ? false : true;
     this.setState({selected_groups});
-
-    /*
-    bien tout commenter
-    */
   }
 
 ////SET CHECK BOXES ////
