@@ -1,5 +1,10 @@
 # Azure Group - Application d'accès relative aux plateformes
 
+### Pré-requis
+- Seuls ceux qui ont un accès administrateur à l'Azure AD peuvent suivre cette documentation
+- Avoir l'accès aux serveurs FTP de GPSEO
+- Connaitre la programation un minimum 
+
 ## Usage
 
 ### Connexion 
@@ -41,7 +46,7 @@ Il faut donc ajouter l'administrateur en tant que propriétaire parmi la liste d
 ## Ajouter un nouveau groupe
 
 ### Récupérer l'ID du groupe
-Créez ou sélectionnez le groupe que vous voulez ajouter à l'application. Nous en aurons besoin pour plus tard.
+Créez ou sélectionnez le groupe que vous voulez ajouter à l'application. Dans l'onglet *Propriétés*, copier *l'id d'objet*. Nous en aurons besoin pour plus tard.
 ![Nouveau groupe](./public/newgroup.png)
 
 ### Ajouter le groupe dans les fichiers
@@ -69,5 +74,7 @@ Copier coller le contenu de **Votre code ici** avec *l'ID Objet* récupéré dan
 
 Suivez ensuite les consignes de **Ajouter un administrateur** pour garantir son utilisation
 
-
 ## Fonctionnement 
+
+L'utilisateur demande un accès sur nos plateformes. Un administrateur d'Azure Groups l'ajoute. Il devient donc membre du groupe et reçoit une invitation pour confirmer son compte. Une fois accepté, il peut directement utiliser la plateforme désiré.
+![Fonctionnnement](./public/fonctionnement.png)
