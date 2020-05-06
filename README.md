@@ -1,4 +1,4 @@
-# Azure Group - Application d'accès relative aux plateformes
+# Azure Groups - Application d'accès relative aux plateformes
 
 ### Pré-requis
 - Seuls ceux qui ont un accès administrateur à l'Azure AD peuvent suivre cette documentation
