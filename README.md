@@ -14,7 +14,7 @@ Le controle des membres se fait ici :
 
 1. Groupes dont vous avez la possibilité de modifier, veuillez en sélectioner un pour pouvoir modifier son contenu.
 2. Liste courante des membres du groupe sélectionné plus haut. Une sélection de chaque membre est possible pour ensuite le modifier.
-3. Après avoir sélectionné un membre. Vous avez la possibilité de supprimer son affection au groupe ( et uniquement son affectation ) ou de le réinviter.
+3. Après avoir sélectionné un membre. Vous avez la possibilité de supprimer son affectation au groupe ( et uniquement son affectation ) ou de le réinviter.
 4. Ajouter un membre se fait en 2 étapes : rechercher l'utilisateur dans la base de données, ajouter l'utilisateur avec le bouton **Inviter**.
 5. Une barre de recherche est disponible pour filtrer les membres du groupes pour une modification rapide
 ![Page groupes](./public/groupes.png)
@@ -22,10 +22,10 @@ Le controle des membres se fait ici :
 ## Ajouter un administrateur
 
 ### Ajouter l'administrateur à l'application
-Connectez à l'Azure AD de GPSEO et rechercher dans les groupes **admin-azure-groups**
+Connectez vous à l'Azure AD de GPSEO et rechercher dans les groupes : **admin-azure-groups**
 ![Résultat](./public/aag.png)
 
-Ajoutez les membres que vous désirez, affectez ensuite le rôle suivant : **Administrateur du flux utilisateur B2C** (Ajouter un membre > Double cliquez sur le membre > Rôles affectés )
+Ajoutez les membres que vous désirez à ce groupe, puis affectez ensuite le rôle suivant à chacun des membres : **Administrateur du flux utilisateur B2C** ( Ajouter un membre > Double cliquez sur le membre > Rôles affectés )
 ![Roles](./public/role.png)
 
 L'administrateur peut accéder maintenant à l'application.
@@ -42,7 +42,7 @@ Il faut donc ajouter l'administrateur en tant que propriétaire parmi la liste d
 
 ### Récupérer l'ID du groupe
 Créez ou sélectionnez le groupe que vous voulez ajouter à l'application. Nous en aurons besoin pour plus tard.
-![Nouveau groupe](./public/newgroupe.png)
+![Nouveau groupe](./public/newgroup.png)
 
 ### Ajouter le groupe dans les fichiers
 Veuillez vous connecter au serveur FTP du site web GPSEO et accéder aux dossiers de l'application Azure Groups. Puis naviguer dans **src/env/Groups.js**. Il devrait ressembler à ci-dessous:
