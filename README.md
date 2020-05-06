@@ -3,16 +3,16 @@
 ## Usage
 
 ### Connexion 
-![Page de connexion][./public/connexion.png]
+![Page de connexion](./public/connexion.png)
 
 Voici la première page sur laquelle vous arrivez. Veuillez vous connecter directement avec votre compte administrateur Azure-Groups ( pas de compte admin ? Voir directement la partie **Ajouter un administrateur** )
 
-![Page connecté][./public/afterconnect.png]
+![Page connecté](./public/afterconnect.png)
 
 Une fois connecté, vous devriez voir **Groupes** ajouté dans votre barre de navigation
 
 ### Groupes
-![Page groupes][./public/groupes.png]
+![Page groupes](./public/groupes.png)
 
 Le controle des membres se fait ici :
 
