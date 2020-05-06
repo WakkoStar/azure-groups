@@ -1,55 +1,29 @@
-# Azure-Groups
+# Azure Group - Application d'accès relative aux plateformes
 
-L'interface est codé en Javascript avec le framework React et le backend utilisé est Microsoft Graph pour les requêtes réseaux.
+## Usage
 
-## Documentation de l'application relative aux plateformes
+### Connexion 
+[Page de connexion][./public/connexion.png]
 
-#### Fichiers importants
-- App.js : Fichier racine
-- Navbar.js : Fichier pour la navigation
-- Config.js : Configuration de l'application et de l'annuaire Azure AD
-- Groups.js : Fichier pour controler les groupes
-- GraphService.js : Méthodes pour les requetes réseaux
+Voici la première page sur laquelle vous arrivez. Veuillez vous connecter directement avec votre compte administrateur Azure-Groups ( pas de compte admin ? Voir directement la partie **Ajouter un administrateur** )
 
-#### Page importantes :
-- Form.js : Page "Inviter"
-- List.js : Page "Groupe"
-- Welcome.js : Page "Connexion"
+[Page connecté][./public/afterconnect.png]
 
-## Comment ajouter un groupe
+Une fois connecté, vous devriez voir **Groupes** ajouté dans votre barre de navigation
 
-Dans le fichier `Groups.js` tout les groupes sont listés en 2 parties :
-`admin` contient des personnes pouvant éditer les groupes `invite` qui contient les personnes pouvant accéder aux plateformes.
+### Groupes
+[Page groupes][./public/groupes.png]
 
-Une plateforme possède donc deux groupes un `admin` et un `invite`. Ces deux groupes doivent possèder le même index pour leur fonctionnement.
+Le controle des membres se fait ici :
 
-#### Fichier `Groups.js`
-```json
-{
-    "invite" : [
-        {
-          "name" : "Habitat.gpseo",
-          "id" : "ee109a66-f87d-4933-8cc1-562047148e39"
-        },
-        {
-          "name" : "Communes.gpseo",
-          "id" : "325b8174-e8ad-45dd-94c1-94ee8da896f1"
-        }
-    ],
-    "admin" : [
-      {
-        "name" : "habitat.admin.ag",
-        "id" : "fad2da0c-cc32-4f77-afe1-d23ea2be329a"
-      },
-      {
-        "name" : "communes.admin.ag",
-        "id" : "110c5ab2-d2c6-48f5-8c41-d1bac5b59562"
-      }
-    ]
-}
-```
+1. Groupes dont vous avez la possibilité de modifier, veuillez en sélectioner un pour pouvoir modifier son contenu.
+2. Liste courante des membres du groupe sélectionné plus haut. Une sélection de chaque membre est possible pour ensuite le modifier.
+3. Après avoir sélectionné un membre. Vous avez la possibilité de supprimer son affection au groupe ( et uniquement son affectation ) ou de le réinviter.
+4. Ajouter un membre se fait en 2 étapes : rechercher l'utilisateur dans la base de données, ajouter l'utilisateur avec le bouton **Inviter**.
+5. Une barre de recherche est disponible pour filtrer les membres du groupes pour une modification rapide
 
-#### Groupes actuels
+## Ajouter un administrateur
 
-- Plateforme Habitat : (admin : Admin-Habitat-SSO | invite : DCT-Habitat-SSO)
-- Plateforme Commune : (admin : Admin-Communes-SSO | invite : DCT-Communes-SSO) 
+## Ajouter un nouveau groupe
+
+## Fonctionnement 

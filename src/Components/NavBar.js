@@ -17,20 +17,11 @@ const NavBar = (props) => {
                 {props.isAuthenticated ?
                 (
                   <NavItem>
-                    <RouterNavLink to="/inviter-utilisateur" className="nav-link" exact>Inviter</RouterNavLink>
-                  </NavItem>
-                ): (
-                  ""
-                )}
-                {props.isAuthenticated ?
-                (
-                  <NavItem>
                     <RouterNavLink to="/liste-utilisateur" className="nav-link" exact>Groupes</RouterNavLink>
                   </NavItem>
                 ) : (
                   ""
                 )}
-
             </ul>
         </nav>
       </header>

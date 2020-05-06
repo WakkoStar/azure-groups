@@ -1,11 +1,10 @@
 import React,{useState, useEffect} from 'react';
 import config from '../env/Config';
-import groups from '../env/Groups';
 import {getUsersfromMail, inviteUserfromMail, getIDfromUser, affectUsertoGroup, getMembersfromGroup, deleteMember} from '../API/GraphService';
 
 const List = (props) => {
 
-  const {adminGroups} = props
+  const {groups} = props
   const[userSelected, setSelectUser] = useState({})
   const[groupSelected, setGroupSelected] = useState({id:""})
   const[memberGroup, setMemberGroups] = useState([])
@@ -104,8 +103,8 @@ const List = (props) => {
     if(user !== null){
         let isTaken = false;
         //filter members already is the group
-        for (var i = 0; i < memberGroup.length; i++) {
-          if(memberGroup[i].id === user.id) isTaken = true;
+        for (let j = 0; j < memberGroup.length; j++) {
+          if(memberGroup[j].id === user.id) isTaken = true;
         }
 
         if(!isTaken) {
@@ -154,7 +153,6 @@ const List = (props) => {
   }
 
   const ButtonList = ({group, i}) => {
-    if(adminGroups[i] === group.id){
           return(
             <button
               onClick={() => selectGroup(group.id, group.name)}
@@ -164,9 +162,6 @@ const List = (props) => {
             {group.name}
             </button>
           )
-    }else{
-      return false
-    }
   }
 
   return(
@@ -175,8 +170,8 @@ const List = (props) => {
 
         <div id="group_nav">
           {
-            adminGroups.length > 0 ? (
-              groups.invite.map((group, index) => {
+            groups.length > 0 ? (
+              groups.map((group, index) => {
                 return <ButtonList group={group} i={index}/>
               })
             ):(
@@ -234,7 +229,7 @@ const List = (props) => {
           </div>
 
           <div style={{height:'80%'}}>
-            <form autoComplete="off">
+            <div className="form">
               <h2>Ajouter un membre</h2>
               <input
                 type="text"
@@ -255,7 +250,7 @@ const List = (props) => {
                   }
                 </ul>
               </div>
-            </form>
+            </div>
           </div>
         </div>
 

@@ -120,6 +120,16 @@ export async function checkUserIsMember(accessToken,id_group, id_user)
   return user
 }
 
+//Vérifier s'il l'admin fait partie du groupes
+export async function checkUserIsOwner(accessToken,id_group, id_user)
+{
+  const client = getAuthenticatedClient(accessToken);
+
+  //get user from group
+  const admin = await client.api("/groups/"+id_group+"/owners/"+id_user+"/$ref").get();
+  return admin
+}
+
 //Recuperer les groupes dans lequel fait partie l'admin et retourne les groupes invités
 export async function getAdminGroups(accessToken, groups_admin, groups_invite)
 {
@@ -129,12 +139,12 @@ export async function getAdminGroups(accessToken, groups_admin, groups_invite)
   var adminGroups = [];
   //Verifier pour chaque groupe que l'admin appartient aux groupes
   groups_admin.map(
-    async(group_admin,index) => {
+    async(group_admin) => {
       try {
-          await checkUserIsMember(accessToken,group_admin.id, admin.id);
-          adminGroups.push(groups_invite[index].id);
+          await checkUserIsOwner(accessToken,group_admin.id, admin.id);
+          adminGroups.push(group_admin);
       } catch (e) {
-        adminGroups.push("");
+        
       }
     });
   

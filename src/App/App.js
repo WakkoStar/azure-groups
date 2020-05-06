@@ -5,7 +5,6 @@ import { UserAgentApplication } from 'msal';
 
 import NavBar from '../Components/NavBar';
 import Welcome from '../Components/Welcome';
-import Formpage from '../Components/FormPage';
 import List from '../Components/List';
 
 import config from '../env/Config';
@@ -50,7 +49,7 @@ const App = () => {
         scopes: config.scopes
       });
 
-      getAdminGroups(accessToken, groups.admin, groups.invite)
+      getAdminGroups(accessToken, groups)
       .then((adminGroups) => {
         setAdminGroups(adminGroups)
         setUser({isAuth: true, name: user.displayName })
@@ -101,14 +100,9 @@ const App = () => {
   const PrivateRoutes = () => {
     if(user.isAuth){
       return (
-        <>
-        <Route exact path="/inviter-utilisateur">
-          <Formpage adminGroups={adminGroups}/>
-        </Route>
         <Route exact path="/liste-utilisateur">
-            <List adminGroups={adminGroups}/>
+            <List groups={adminGroups}/>
         </Route>
-        </>
       )
     }
 
