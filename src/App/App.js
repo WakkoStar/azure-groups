@@ -78,7 +78,8 @@ const App = () => {
   }
 
   const login = async() => {
-    session.loginPopup(
+    if(session){
+      session.loginPopup(
         {
           scopes: config.scopes,
           prompt: "select_account"
@@ -90,6 +91,7 @@ const App = () => {
       .catch((err) => {
         console.log(err)
       })
+    }
   }
 
   //Fonction pour se deconnecter
