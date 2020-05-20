@@ -1,9 +1,9 @@
 # Azure Groups - Application d'accès relative aux plateformes
 
 ### Pré-requis
-- Seuls ceux qui ont un accès administrateur à l'Azure AD peuvent suivre cette documentation
+- Etre affecté en tant que *Admin de rôle privilégié* ou *admin général* sur AAD
 - Avoir l'accès aux serveurs FTP de GPSEO
-- Connaitre la programation un minimum 
+- Connaitre la programmation et AAD un minimum 
 
 ## Usage
 
@@ -30,7 +30,7 @@ Le controle des membres se fait ici :
 Connectez vous à l'Azure AD de GPSEO et rechercher dans les groupes : **admin-azure-groups**
 ![Résultat](./public/aag.png)
 
-Ajoutez les membres que vous désirez à ce groupe, puis affectez ensuite le rôle suivant à chacun des membres : **Administrateur du flux utilisateur B2C** ( Ajouter un membre > Double cliquez sur le membre > Rôles affectés )
+Ajoutez les membres que vous désirez à ce groupe, puis affectez ensuite le rôle suivant à chacun des membres : **External ID user flow administrator** ( Ajouter un membre > Double cliquez sur le membre > Rôles affectés )
 ![Roles](./public/role.png)
 
 L'administrateur peut accéder maintenant à l'application.
