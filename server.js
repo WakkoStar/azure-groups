@@ -24,5 +24,5 @@ app.get('*',(req, res) => {
 })
 
 //Définition et mise en place du port d'écoute
-const port = 8080;
+const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
