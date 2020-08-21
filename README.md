@@ -1,5 +1,8 @@
 # Application relative d'accès aux plateformes
 
+![Fonctionnement](./public/fonctionnement.png)
+Voici un schéma réprensentant l'utilisation de l'application dans son environnement
+
 ## Utilisation
 ![Groupes](./public/groupes.png)
 > Veuillez vous connecter avec un compte Microsoft pour accéder à l'application
