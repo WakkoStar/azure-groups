@@ -1,5 +1,5 @@
 var graph = require('@microsoft/microsoft-graph-client');
-var generator = require('generate-password');
+
 //Initialiser le client sur Microsoft graph
 function getAuthenticatedClient(accessToken)
 {

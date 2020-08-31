@@ -34,7 +34,7 @@ class App extends Component  {
     this.state = {
       isAuthenticated: (admin !== null),
       user: {},
-      error: null,
+      error:{message: "", debug: ""},
       adminGroups: [],
       selected_groups: []
     };
@@ -102,7 +102,10 @@ class App extends Component  {
               displayName: user.displayName,
               email: user.mail || user.userPrincipalName
             },
-            error: null
+            error:{
+              message:"",
+              debug: ""
+            }
           });
         }
       }
@@ -151,6 +154,7 @@ class App extends Component  {
     return (
       <Router>
         <NavBar isAuthenticated={this.state.isAuthenticated}/>
+        <div><p style={{width: '60%', margin: '0 auto'}}>{this.state.error.message}</p></div>
         <Route exact path="/"
           render={() =>
             <Welcome
@@ -182,7 +186,7 @@ class App extends Component  {
                 } />
             ) : (
               ""
-            )  
+            )
           }
 
       </Router>
