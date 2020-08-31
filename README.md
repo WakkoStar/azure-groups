@@ -34,3 +34,8 @@ La fonction rechercher permet de filtrer les membres. La recherche se fait par m
 
 ### Ajouter un groupe à une personne
 L'application affiche les groupes dont l'utilisateur courant est propriétaire ET membre dans l'azure AD. Pour ajouter un groupe à l'application pour un utilisateur quelconque. Celui ci doit être propriétaire ET membre d'un groupe, tout simplement.
+
+
+## Modification du code 
+
+Une fois les modifications faites. Buildez l'application. Transferez le dossier "build" dans le serveur FTP. Effacez le dossier "public" du serveur puis renommez le dossier "build" en "public".
