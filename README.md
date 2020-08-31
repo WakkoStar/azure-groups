@@ -38,4 +38,4 @@ L'application affiche les groupes dont l'utilisateur courant est propriétaire E
 
 ## Modification du code 
 
-Une fois les modifications faites. Buildez l'application. Transferez le dossier "build" dans le serveur FTP. Effacez le dossier "public" du serveur puis renommez le dossier "build" en "public".
+Afin de modifer l'application et de coder de nouvelles fonctionnalités. Il faut, une fois les modifications faites dans les différents fichiers de l'application. Buildez l'application. Transferez le dossier "build" dans le serveur FTP. Effacez le dossier "public" du serveur puis renommez le dossier "build" en "public".
