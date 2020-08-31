@@ -43,7 +43,6 @@ const Search = ({setMembersRedux, selectedGroup, setNextLink}) => {
                         type="text"
                         placeholder="Rechercher par mail"
                         id="user_search"
-                        value={mailReact}
                         onChange={(e) => setMailReact(e.target.value)}
                     />
                     <button onClick={() => setMail(mailReact)} title="Rechercher">

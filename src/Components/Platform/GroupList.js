@@ -26,6 +26,7 @@ function GroupList({setNextLink, selectedGroup, adminGroups, setMembersRedux, se
 
         //Reset selections and searchs
         document.getElementById("user_add").value = ''
+
         selectMemberRedux({id: ""})
     }
 
